@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teachers - Education Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      animation: fadeIn 1s ease-in;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 30px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .teacher-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .teacher-card {
+      background: white;
+      width: 250px;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s ease;
+    }
+
+    .teacher-card.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .teacher-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: #e0e0e0;
+      padding: 4px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .teacher-card img:hover {
+      transform: scale(1.1);
+    }
+
+    .teacher-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .teacher-subject {
+      color: #666;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Education Website</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="students.html">Students</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="attendens.html">Attendance</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h2>Our Teachers</h2>
+
+  <div class="teacher-container">
+    <div class="teacher-card">
+      <img src="teacher m1.jpg" alt="Anita Sharma">
+      <div class="teacher-name">Anita Sharma</div>
+      <div class="teacher-subject">Mathematics</div>
+    </div>
+    <div class="teacher-card">
+      <img src="teacher s2.jpg" alt="Ritu Verma">
+      <div class="teacher-name">Ritu Verma</div>
+      <div class="teacher-subject">Science</div>
+    </div>
+    <div class="teacher-card">
+      <img src="teacher cs3.jpg" alt="Nisha Kapoor">
+      <div class="teacher-name">Nisha Kapoor</div>
+      <div class="teacher-subject">Computer Science</div>
+    </div>
+    <div class="teacher-card">
+      <img src="teacher e4.jpg" alt="Meena Das">
+      <div class="teacher-name">Meena Das</div>
+      <div class="teacher-subject">English</div>
+    </div>
+    <div class="teacher-card">
+      <img src="teacher ss5.jpg" alt="Kavita Joshi">
+      <div class="teacher-name">Kavita Joshi</div>
+      <div class="teacher-subject">Social Studies</div>
+    </div>
+    <div class="teacher-card">
+      <img src="teacher ad6.jpg" alt="Pooja Tambe">
+      <div class="teacher-name">Pooja Tambe</div>
+      <div class="teacher-subject">Art & Design</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Education Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animate teacher cards one by one
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".teacher-card");
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add("show");
+        }, index * 200);
+      });
+    });
+  </script>
+
+</body>
+</html>

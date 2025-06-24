@@ -1,0 +1,1 @@
+console.log("Education Management System loaded.");

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students - Education Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      animation: fadeIn 1s ease-in;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 30px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .student-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .student-card {
+      background: white;
+      width: 250px;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s ease;
+    }
+
+    .student-card.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+.student-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain; /* Changed from cover to contain */
+  background-color: #e0e0e0; /* Optional: adds gray background behind image */
+  padding: 4px; /* Optional: creates space if image doesn't fill circle */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+    .student-card img:hover {
+      transform: scale(1.1);
+    }
+
+    .student-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .student-course {
+      color: #666;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Education Website</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="students.html">Students</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="attendens.html">Attendance</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h2>Our Students</h2>
+
+  <div class="student-container">
+    <div class="student-card">
+      <img src="student1.jpg" alt="Manoj Jena">
+      <div class="student-name">Manoj Jena</div>
+      <div class="student-course">Class 10 - Science</div>
+    </div>
+    <div class="student-card">
+      <img src="student2.jpg" alt="Shoaib Ali Mukeri">
+      <div class="student-name">Shoaib Ali Mukeri</div>
+      <div class="student-course">Class 9 - Mathematics</div>
+    </div>
+    <div class="student-card">
+      <img src="student3.jpg" alt="Rishu Kumar">
+      <div class="student-name">Rishu Kumar</div>
+      <div class="student-course">Class 8 - Computer</div>
+    </div>
+    <div class="student-card">
+      <img src="student4.jpg" alt="Sonu Malohtra">
+      <div class="student-name">Sonu Malohtra</div>
+      <div class="student-course">Class 7 - English</div>
+    </div>
+    <div class="student-card">
+      <img src="student5.jpg" alt="Shaina Singh">
+      <div class="student-name">Shaina Singh</div>
+      <div class="student-course">Class 6 - Social Studies</div>
+    </div>
+    <div class="student-card">
+      <img src="student6.jpg" alt="Divya Tambe">
+      <div class="student-name">Divya Tambe</div>
+      <div class="student-course">Class 5 - Art & Design</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Education Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animate student cards one by one
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".student-card");
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add("show");
+        }, index * 200);
+      });
+    });
+  </script>
+
+</body>
+</html>

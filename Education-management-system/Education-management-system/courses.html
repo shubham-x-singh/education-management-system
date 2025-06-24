@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses - Education Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      animation: fadeIn 1s ease-in;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 30px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .course {
+      background: white;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s ease;
+    }
+
+    .course.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .course img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .course img:hover {
+      transform: scale(1.05);
+    }
+
+    .course-title {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Education Website</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="students.html">Students</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="attendens.html">Attendance</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h2>Our Courses</h2>
+
+  <div class="course-container" id="courseContainer">
+    <div class="course">
+      <img src="math1.jpg" alt="Math">
+      <div class="course-title">Mathematics</div>
+    </div>
+    <div class="course">
+      <img src="science1.jpeg" alt="Science">
+      <div class="course-title">Science</div>
+    </div>
+    <div class="course">
+      <img src="compute science1.jpg" alt="Computer Science">
+      <div class="course-title">Computer Science</div>
+    </div>
+    <div class="course">
+      <img src="english1.jpg" alt="English">
+      <div class="course-title">English</div>
+    </div>
+    <div class="course">
+      <img src="Social Studies1.jpeg" alt="Social Studies">
+      <div class="course-title">Social Studies</div>
+    </div>
+    <div class="course">
+      <img src="Art & Design1.jpg" alt="Art and Design">
+      <div class="course-title">Art & Design</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Education Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Fade-in animation for courses on scroll or load
+    document.addEventListener("DOMContentLoaded", () => {
+      const courses = document.querySelectorAll(".course");
+      courses.forEach((course, i) => {
+        setTimeout(() => {
+          course.classList.add("show");
+        }, 200 * i); // delay each card
+      });
+    });
+  </script>
+
+</body>
+</html>
