@@ -34,18 +34,7 @@ You can use this as a template for:
 - College or school portals
 - Frontend projects for learning or showcasing
 
-## 🚀 Live Demo
-
-*(Add live site link here when hosted — like GitHub Pages)*
-
----
-
-### 📷 Screenshots
-
-*(Add screenshots if you want — helps a lot when clients or recruiters see your repo)*
-
----
-
 ## 📩 Contact
 
 Made by **Shubham Kumar Singh** 
+email maharashtrajai8899@gmail.com
